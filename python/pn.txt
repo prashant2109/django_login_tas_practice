@@ -1,0 +1,30 @@
+GIL:
+    --> GIL is a lock, that allows 1 thread to hold the control of Python Interpreter.
+        This means that only 1 thread can execute at any given point of time.
+
+    --> There is a reference count of an object in python. During multithreading, 
+        if at all a situation arises that, 2 different threads increase or decrease 
+        the same reference object, then there is possibility of incorrect release of 
+        memory takes place(i.e., memory is released even if the object exists) or 
+        leaked memory(i.e., memory is never released).
+
+    --> There is solution, can provide locks to whole data structure, which leads to 
+        overhead in building an application, also efficiency might decrease due
+        repeated acquisition and release of lock.
+        
+    --> GIL increases the performance of an single threaded applications.
+
+
+Garbage Collector:
+    --> Memory Management is the process by which application read and write data.
+
+    --> As there is a finite chunk of memory available, the memory manager has to
+        find the free space to allocate to application.This process of providing 
+        memory to application is called memory allocation.
+
+    --> Reference count is used for garbage collection.
+
+    --> Memory is a shared resource on a computer, things can go wrong if different
+        process try to write at same object.
+
+    --> In any case, if the object is still required to hang around in your code, its reference count is greater than 0. Once it drops to 0, the object  has a specific deallocation function that is called which “frees” the memory so that other objects can use it.

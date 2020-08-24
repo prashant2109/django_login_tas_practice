@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 2rem;
+        }
+
+        .user {
+            display: flex;
+        }
+
+        .btn {
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 10px;
+            float: right;
+        }
+
+        .user span {
+            display: inline-block;
+            width: 50%;
+        }
+
+        /* plndpafsif6od0nipiv4qlmepy16p0sk */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="user-info">
+            {% if user.is_authenticated %}
+            <div class="user">
+                <span>Welcome {{user.username}}</span>
+                <form action="logout/" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">Logout</button>
+                </form>
+            </div>
+            {% else %}
+            <div>
+                <span>Anonymous User</span>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>

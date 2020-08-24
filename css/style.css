@@ -1,0 +1,25 @@
+.div_c{
+    border: 2px solid red;
+    /* text-align: center; */
+    height: 300px;
+    /* vertical-align: bottom; */
+}
+
+.div_c h4{
+    vertical-align: middle;
+}
+
+.span_div{
+    border: 2px solid burlywood;
+    width: 30%;
+}
+
+.ch_span{
+    border: 2px solid gray;
+    width: 30%;
+}
+
+.ch2_span{
+    border: 2px solid darkseagreen;
+    /* width: 100; */
+}

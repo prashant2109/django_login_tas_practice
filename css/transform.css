@@ -1,0 +1,30 @@
+.container{
+    margin: 4rem;
+}
+
+.info{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ()
+}
+
+.btn{
+    background: rgb(193, 140, 236);
+    outline: none;
+    font-size: 15px;
+    padding: 4px 12px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    transform: perspective(-10px) translateZ(5px);
+    color: gray;
+}
